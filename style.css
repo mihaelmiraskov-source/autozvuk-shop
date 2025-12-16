@@ -1,3 +1,43 @@
+.site-header {
+    background: rgba(15, 12, 26, 0.6);
+    border-radius: 16px;
+    padding: 16px;
+    margin-bottom: 24px;
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(110, 69, 226, 0.3);
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.logo-image {
+    width: 120px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+.header-text h1 {
+    font-size: 26px;
+    font-weight: 800;
+    background: linear-gradient(45deg, #6E45E2, #88D3CE);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin: 0;
+}
+
+.header-text p {
+    font-size: 14px;
+    color: #aaa;
+    margin: 4px 0 0 0;
+}
 * {
     margin: 0;
     padding: 0;
