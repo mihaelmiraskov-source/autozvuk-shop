@@ -22,7 +22,46 @@
         </div>
     </div>
 </header>
-    </nav>
+<nav class="category-menu">
+    <a href="#" onclick="showPage('dynamics')">Акустические системы (Динамики)</a>
+    <a href="#" onclick="showPage('amplifiers')">Усилители (Усилители мощности)</a>
+    <a href="#" onclick="showPage('accessories')">Дополнительное оборудование и аксессуары</a>
+</nav>
+
+<!-- Основной контент -->
+<main id="main-content">
+    <!-- Главная страница: категории и товары -->
+    <div id="home-page">
+        <nav class="categories">
+            <button onclick="showCategory('all')">Все товары</button>
+            <button onclick="showCategory('dynamics')">Динамики</button>
+            <button onclick="showCategory('subwoofers')">Сабвуферы</button>
+            <button onclick="showCategory('ovals')">Овалы</button>
+            <button onclick="showCategory('tweeters')">Пищалки</button>
+        </nav>
+        <div id="products-container"></div>
+    </div>
+
+    <!-- Страницы категорий -->
+    <div id="dynamics-page" class="page hidden">
+        <h2>Акустические системы (Динамики)</h2>
+        <div id="dynamics-products"></div>
+        <button class="back-btn" onclick="showPage('home')">← Назад</button>
+    </div>
+
+    <div id="amplifiers-page" class="page hidden">
+        <h2>Усилители (Усилители мощности)</h2>
+        <div id="amplifiers-products"></div>
+        <button class="back-btn" onclick="showPage('home')">← Назад</button>
+    </div>
+
+    <div id="accessories-page" class="page hidden">
+        <h2>Дополнительное оборудование и аксессуары</h2>
+        <div id="accessories-products"></div>
+        <button class="back-btn" onclick="showPage('home')">← Назад</button>
+    </div>
+</main>   
+</nav>
 
     <main id="products-container"></main>
 
