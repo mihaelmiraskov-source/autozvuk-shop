@@ -242,17 +242,16 @@ footer {
     border-top: 1px solid rgba(110, 69, 226, 0.2);
     padding: 16px;
     text-align: center;
-    font-size: 12px;
+    font-size: 11px;
     color: #888;
     margin-top: 40px;
-    border-radius: 12px;
+    border-radius: 8px;
     line-height: 1.4;
+    position: relative;
+    z-index: 5;
 }
 
 .legal-footer p {
     margin: 6px 0;
-}
-
-.legal-footer strong {
-    color: #88d3ce;
+    word-wrap: break-word;
 }
