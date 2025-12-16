@@ -190,3 +190,56 @@ footer {
 .legal-footer p {
     margin: 4px 0;
 }
+.category-menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+.category-menu a {
+    background: rgba(110, 69, 226, 0.2);
+    color: #88d3ce;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    transition: all 0.2s;
+    border: 1px solid #6e45e2;
+}
+
+.category-menu a:hover {
+    background: #6e45e2;
+    color: white;
+}
+
+.page {
+    display: none;
+}
+
+.page h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 22px;
+    color: #88d3ce;
+}
+
+.back-btn {
+    background: #6e45e2;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    margin-top: 20px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.back-btn:hover {
+    background: #88d3ce;
+}
+
+.hidden {
+    display: none;
+}
