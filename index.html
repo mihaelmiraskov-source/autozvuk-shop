@@ -1,15 +1,24 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Авто Звук Магазин</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Авто Звук — Каталог</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
     <header>
-        <h1>🔥 НАШИ НОВИНКИ 🔥</h1>
+        <h1>Авто Звук Магазин</h1>
+        <p>Качественный звук для твоего авто 🚗</p>
     </header>
+
+    <nav class="categories">
+        <button onclick="showCategory('all')">Все товары</button>
+        <button onclick="showCategory('dynamics')">Динамики</button>
+        <button onclick="showCategory('subwoofers')">Сабвуферы</button>
+        <button onclick="showCategory('ovals')">Овалы</button>
+        <button onclick="showCategory('tweeters')">Пищалки</button>
+    </nav>
 
     <main id="products-container"></main>
 
