@@ -189,22 +189,22 @@ body {
     background: #6e45e2;
     color: white;
     border: none;
-    padding: 8px 16px;
-    border-radius: 20px;
-    margin-top: 20px;
+    padding: 10px 20px;
+    border-radius: 24px;
+    margin: 24px auto 32px auto;
     cursor: pointer;
-    font-size: 14px;
+    font-size: 15px;
+    font-weight: 600;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(110, 69, 226, 0.4);
+    transition: background 0.2s, transform 0.1s;
 }
 
 .back-btn:hover {
     background: #88d3ce;
-}
-
-.hidden {
-    display: none !important;
+    color: #0f0c1a;
+    transform: scale(1.03);
 }
 
 /* Кнопка корзины (фиксированная снизу) */
