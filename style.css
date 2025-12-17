@@ -255,3 +255,7 @@ footer {
     margin: 6px 0;
     word-wrap: break-word;
 }
+/* Скрытие страниц */
+.hidden {
+    display: none !important;
+}
