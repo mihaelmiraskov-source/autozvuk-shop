@@ -9,6 +9,11 @@ const products = [
     { id: 5, name: "Усилитель Alpine MRV-F300", price: 12500, category: "amplifiers" },
     { id: 6, name: "Усилитель JBL GX-A602", price: 9800, category: "amplifiers" },
     
+    // Автомагнитолы
+    { id: 10, name: "Магнитола Alpine UTE-73BT", price: 15000, category: "headunits" },
+    { id: 11, name: "Магнитола Sony XAV-AX1000", price: 12000, category: "headunits" },
+    { id: 12, name: "Магнитола JVC KW-V950BTS", price: 18000, category: "headunits" },
+    
     // Аксессуары
     { id: 7, name: "Акустический кабель 5м", price: 1200, category: "accessories" },
     { id: 8, name: "Блок предохранителей 60А", price: 450, category: "accessories" },
@@ -60,6 +65,8 @@ function renderCategoryPage(cat) {
     let list = [];
     if (cat === 'dynamics') {
         list = products.filter(p => ['dynamics','subwoofers','ovals','tweeters'].includes(p.category));
+    } else if (cat === 'headunits') {
+        list = products.filter(p => p.category === 'headunits');
     } else if (cat === 'amplifiers') {
         list = products.filter(p => p.category === 'amplifiers');
     } else if (cat === 'accessories') {
