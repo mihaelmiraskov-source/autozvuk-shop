@@ -12,7 +12,6 @@ body {
     line-height: 1.5;
 }
 
-/* Шапка */
 .site-header {
     background: rgba(15, 12, 26, 0.7);
     border-radius: 16px;
@@ -63,7 +62,6 @@ body {
     letter-spacing: 0.3px;
 }
 
-/* Главное меню */
 .category-menu {
     display: flex;
     flex-wrap: wrap;
@@ -90,32 +88,13 @@ body {
     color: white;
 }
 
-/* Фильтры */
-.categories {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
+.page h2 {
+    text-align: center;
     margin-bottom: 20px;
-    justify-content: center;
-}
-
-.categories button {
-    background: rgba(110, 69, 226, 0.2);
+    font-size: 22px;
     color: #88d3ce;
-    border: 1px solid #6e45e2;
-    border-radius: 20px;
-    padding: 6px 14px;
-    font-size: 13px;
-    cursor: pointer;
-    transition: all 0.2s;
 }
 
-.categories button:hover {
-    background: #6e45e2;
-    color: white;
-}
-
-/* Карточки товаров */
 .product-card {
     background: #1a142a;
     border-radius: 12px;
@@ -162,12 +141,10 @@ body {
     background: #88d3ce;
 }
 
-/* Скрытие страниц */
 .hidden {
     display: none !important;
 }
 
-/* Кнопка "Назад" — оранжевая */
 .back-btn.orange {
     background: linear-gradient(45deg, #ff6b00, #ff8e00);
     color: white;
@@ -189,7 +166,6 @@ body {
     transform: scale(1.03);
 }
 
-/* Корзина */
 footer {
     position: fixed;
     bottom: 0;
@@ -218,7 +194,6 @@ footer {
     text-align: center;
 }
 
-/* Юридический подвал */
 .legal-footer {
     background: rgba(10, 8, 18, 0.8);
     border-top: 1px solid rgba(110, 69, 226, 0.2);
