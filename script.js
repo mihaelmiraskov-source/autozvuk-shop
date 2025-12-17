@@ -71,24 +71,29 @@ const products = [
 ];
 
 let cart = [];
-let currentPage = 'home';
 
 // Показать страницу
 function showPage(page) {
-    document.querySelectorAll('.page, #home-page').forEach(el => el.classList.add('hidden'));
+    document.querySelectorAll('.page, #home-page').forEach(el => {
+        el.classList.add('hidden');
+    });
     if (page === 'home') {
         document.getElementById('home-page').classList.remove('hidden');
         renderProducts('all');
     } else {
-        document.getElementById(page + '-page').classList.remove('hidden');
-        renderCategoryPage(page);
+        const pageEl = document.getElementById(page + '-page');
+        if (pageEl) {
+            pageEl.classList.remove('hidden');
+            renderCategoryPage(page);
+        }
     }
-    currentPage = page;
 }
 
 // Отобразить товары на главной
 function renderProducts(category = 'all') {
     const container = document.getElementById('products-container');
+    if (!container) return;
+
     container.innerHTML = '';
 
     const filtered = category === 'all' 
@@ -116,6 +121,8 @@ function renderProducts(category = 'all') {
 // Отобразить товары на странице категории
 function renderCategoryPage(categoryKey) {
     const container = document.getElementById(categoryKey + '-products');
+    if (!container) return;
+
     container.innerHTML = '';
 
     let filtered = [];
@@ -151,8 +158,13 @@ function renderCategoryPage(categoryKey) {
 // Добавить в корзину
 function addToCart(productId) {
     const product = products.find(p => p.id === productId);
+    if (!product) return;
+
     cart.push(product);
-    document.getElementById('cart-btn').textContent = `🛒 Корзина (${cart.length})`;
+    const cartBtn = document.getElementById('cart-btn');
+    if (cartBtn) {
+        cartBtn.textContent = `🛒 Корзина (${cart.length})`;
+    }
     alert(`✅ ${product.name} добавлен в корзину!`);
 }
 
@@ -161,5 +173,7 @@ function showCategory(category) {
     renderProducts(category);
 }
 
-// Инициализация
-renderProducts('all');
+// Запуск после полной загрузки страницы
+document.addEventListener('DOMContentLoaded', () => {
+    renderProducts('all');
+});
