@@ -44,31 +44,25 @@
         <div id="dynamics-page" class="page hidden">
             <h2>Акустические системы (Динамики)</h2>
             <div id="dynamics-products"></div>
-            <button class="back-btn" onclick="showPage('home')">← Назад</button>
+            <button class="back-btn" onclick="showPage('home'); return false;">← Назад</button>
         </div>
 
         <!-- Страница: Усилители -->
         <div id="amplifiers-page" class="page hidden">
             <h2>Усилители (Усилители мощности)</h2>
             <div id="amplifiers-products"></div>
-            <button class="back-btn" onclick="showPage('home')">← Назад</button>
+            <button class="back-btn" onclick="showPage('home'); return false;">← Назад</button>
         </div>
 
         <!-- Страница: Аксессуары -->
         <div id="accessories-page" class="page hidden">
             <h2>Дополнительное оборудование и аксессуары</h2>
             <div id="accessories-products"></div>
-            <button class="back-btn" onclick="showPage('home')">← Назад</button>
+            <button class="back-btn" onclick="showPage('home'); return false;">← Назад</button>
         </div>
     </main>
 
-    <!-- Кнопка корзины (фиксированная снизу) -->
-    <footer>
-        <button id="cart-btn">🛒 Корзина (0)</button>
-    </footer>
-
-    <!-- Юридический подвал -->
-       <!-- Кнопка корзины (фиксированная снизу) -->
+    <!-- Кнопка корзины (один раз!) -->
     <footer>
         <button id="cart-btn">🛒 Корзина (0)</button>
     </footer>
@@ -86,6 +80,3 @@
     <script src="script.js"></script>
 </body>
 </html>
-<a href="#" onclick="showPage('dynamics'); return false;">Акустические системы (Динамики)</a>
-<a href="#" onclick="showPage('amplifiers'); return false;">Усилители (Усилители мощности)</a>
-<a href="#" onclick="showPage('accessories'); return false;">Дополнительное оборудование и аксессуары</a>
