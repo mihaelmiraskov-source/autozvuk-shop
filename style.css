@@ -63,7 +63,7 @@ body {
     letter-spacing: 0.3px;
 }
 
-/* Главное меню под шапкой */
+/* Главное меню */
 .category-menu {
     display: flex;
     flex-wrap: wrap;
@@ -90,7 +90,7 @@ body {
     color: white;
 }
 
-/* Фильтры на главной */
+/* Фильтры */
 .categories {
     display: flex;
     flex-wrap: wrap;
@@ -130,17 +130,6 @@ body {
     gap: 8px;
 }
 
-.product-card img {
-    width: 100%;
-    max-width: 120px;
-    height: auto;
-    object-fit: contain;
-    margin-bottom: 10px;
-    border-radius: 6px;
-    background: #0f0c1a;
-    padding: 4px;
-}
-
 .product-card h3 {
     font-size: 15px;
     font-weight: 600;
@@ -173,23 +162,17 @@ body {
     background: #88d3ce;
 }
 
-/* Управление страницами */
-.page {
-    display: none;
+/* Скрытие страниц */
+.hidden {
+    display: none !important;
 }
 
-.page h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    font-size: 22px;
-    color: #88d3ce;
-}
-
-.back-btn {
-    background: #6e45e2;
+/* Кнопка "Назад" — оранжевая */
+.back-btn.orange {
+    background: linear-gradient(45deg, #ff6b00, #ff8e00);
     color: white;
     border: none;
-    padding: 10px 20px;
+    padding: 10px 24px;
     border-radius: 24px;
     margin: 24px auto 32px auto;
     cursor: pointer;
@@ -197,17 +180,16 @@ body {
     font-weight: 600;
     display: block;
     text-align: center;
-    box-shadow: 0 2px 6px rgba(110, 69, 226, 0.4);
+    box-shadow: 0 3px 8px rgba(255, 107, 0, 0.3);
     transition: background 0.2s, transform 0.1s;
 }
 
-.back-btn:hover {
-    background: #88d3ce;
-    color: #0f0c1a;
+.back-btn.orange:hover {
+    background: linear-gradient(45deg, #ff8e00, #ffa500);
     transform: scale(1.03);
 }
 
-/* Кнопка корзины (фиксированная снизу) */
+/* Корзина */
 footer {
     position: fixed;
     bottom: 0;
@@ -254,8 +236,4 @@ footer {
 .legal-footer p {
     margin: 6px 0;
     word-wrap: break-word;
-}
-/* Скрытие страниц */
-.hidden {
-    display: none !important;
 }
