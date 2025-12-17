@@ -22,16 +22,16 @@
     <!-- Главное меню -->
     <nav class="category-menu">
         <a href="#" onclick="showPage('dynamics'); return false;">Акустические системы (Динамики)</a>
-        <a href="#" onclick="showPage('amplifiers'); return false;">Усилители (Усилители мощности)</a>
+        <a href="#" onclick="showPage('amps'); return false;">Усилители, процессоры, приборы, датчики</a>
         <a href="#" onclick="showPage('headunits'); return false;">Автомагнитолы</a>
         <a href="#" onclick="showPage('subsacc'); return false;">Сабвуферы и аксессуары</a>
+        <a href="#" onclick="showPage('boxes'); return false;">Короба и подиумы</a>
     </nav>
 
     <!-- Основной контент -->
     <main id="main-content">
         <!-- Главная (пустая) -->
-        <div id="home-page">
-        </div>
+        <div id="home-page"></div>
 
         <!-- Страница: Акустика -->
         <div id="dynamics-page" class="page hidden">
@@ -40,10 +40,10 @@
             <button class="back-btn orange" onclick="showPage('home'); return false;">← Назад</button>
         </div>
 
-        <!-- Страница: Усилители -->
-        <div id="amplifiers-page" class="page hidden">
-            <h2>Усилители (Усилители мощности)</h2>
-            <div id="amplifiers-products"></div>
+        <!-- Страница: Усилители и т.д. -->
+        <div id="amps-page" class="page hidden">
+            <h2>Усилители, процессоры, приборы, датчики</h2>
+            <div id="amps-products"></div>
             <button class="back-btn orange" onclick="showPage('home'); return false;">← Назад</button>
         </div>
 
@@ -60,6 +60,13 @@
             <div id="subsacc-products"></div>
             <button class="back-btn orange" onclick="showPage('home'); return false;">← Назад</button>
         </div>
+
+        <!-- Страница: Короба и подиумы -->
+        <div id="boxes-page" class="page hidden">
+            <h2>Короба и подиумы</h2>
+            <div id="boxes-products"></div>
+            <button class="back-btn orange" onclick="showPage('home'); return false;">← Назад</button>
+        </div>
     </main>
 
     <!-- Кнопка корзины -->
@@ -67,7 +74,7 @@
         <button id="cart-btn">🛒 Корзина (0)</button>
     </footer>
 
-    <!-- Юридический подвал (адаптирован под автозвук) -->
+    <!-- Юридический подвал -->
     <footer class="legal-footer">
         <p><strong>© Style and Sound. Все права защищены.</strong></p>
         <p><strong>Внимание!</strong> Посещая сайт, вы подтверждаете своё совершеннолетие.</p>
