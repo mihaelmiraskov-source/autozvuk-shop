@@ -26,7 +26,6 @@ function showPage(page) {
     document.querySelectorAll('#home-page, .page').forEach(el => el.classList.add('hidden'));
     if (page === 'home') {
         document.getElementById('home-page').classList.remove('hidden');
-        renderProducts('all');
     } else {
         const el = document.getElementById(page + '-page');
         if (el) {
@@ -50,14 +49,6 @@ function getImageForProduct(name) {
     </svg>`;
 }
 
-function renderProducts(category = 'all') {
-    const cont = document.getElementById('products-container');
-    if (!cont) return;
-    cont.innerHTML = '';
-    const list = category === 'all' ? products : products.filter(p => p.category === category);
-    renderList(list, cont);
-}
-
 function renderCategoryPage(cat) {
     const cont = document.getElementById(cat + '-products');
     if (!cont) return;
@@ -65,10 +56,10 @@ function renderCategoryPage(cat) {
     let list = [];
     if (cat === 'dynamics') {
         list = products.filter(p => ['dynamics','subwoofers','ovals','tweeters'].includes(p.category));
-    } else if (cat === 'headunits') {
-        list = products.filter(p => p.category === 'headunits');
     } else if (cat === 'amplifiers') {
         list = products.filter(p => p.category === 'amplifiers');
+    } else if (cat === 'headunits') {
+        list = products.filter(p => p.category === 'headunits');
     } else if (cat === 'accessories') {
         list = products.filter(p => p.category === 'accessories');
     }
@@ -102,10 +93,6 @@ function addToCart(id) {
     alert(`✅ ${p.name} добавлен в корзину!`);
 }
 
-function showCategory(cat) {
-    renderProducts(cat);
-}
-
 document.addEventListener('DOMContentLoaded', () => {
-    renderProducts('all');
+    // Главная страница — пустая
 });
