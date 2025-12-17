@@ -23,6 +23,7 @@
     <nav class="category-menu">
         <a href="#" onclick="showPage('dynamics'); return false;">Акустические системы (Динамики)</a>
         <a href="#" onclick="showPage('amplifiers'); return false;">Усилители (Усилители мощности)</a>
+        <a href="#" onclick="showPage('headunits'); return false;">Автомагнитолы</a>
         <a href="#" onclick="showPage('accessories'); return false;">Дополнительное оборудование и аксессуары</a>
     </nav>
 
@@ -36,6 +37,7 @@
                 <button onclick="showCategory('subwoofers')">Сабвуферы</button>
                 <button onclick="showCategory('ovals')">Овалы</button>
                 <button onclick="showCategory('tweeters')">Пищалки</button>
+                <button onclick="showCategory('headunits')">Автомагнитолы</button>
             </nav>
             <div id="products-container"></div>
         </div>
@@ -51,6 +53,13 @@
         <div id="amplifiers-page" class="page hidden">
             <h2>Усилители (Усилители мощности)</h2>
             <div id="amplifiers-products"></div>
+            <button class="back-btn orange" onclick="showPage('home'); return false;">← Назад</button>
+        </div>
+
+        <!-- Страница: Автомагнитолы -->
+        <div id="headunits-page" class="page hidden">
+            <h2>Автомагнитолы</h2>
+            <div id="headunits-products"></div>
             <button class="back-btn orange" onclick="showPage('home'); return false;">← Назад</button>
         </div>
 
