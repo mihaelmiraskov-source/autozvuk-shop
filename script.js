@@ -54,15 +54,18 @@ function renderCategoryPage(cat) {
     if (!cont) return;
     cont.innerHTML = '';
     let list = [];
+
     if (cat === 'dynamics') {
         list = products.filter(p => ['dynamics','subwoofers','ovals','tweeters'].includes(p.category));
     } else if (cat === 'amplifiers') {
         list = products.filter(p => p.category === 'amplifiers');
     } else if (cat === 'headunits') {
         list = products.filter(p => p.category === 'headunits');
-    } else if (cat === 'accessories') {
-        list = products.filter(p => p.category === 'accessories');
+    } else if (cat === 'subsacc') {
+        // Сабвуферы + аксессуары
+        list = products.filter(p => p.category === 'subwoofers' || p.category === 'accessories');
     }
+
     renderList(list, cont);
 }
 
