@@ -1,58 +1,18 @@
 const products = [
-    {
-        id: 1,
-        name: "Компонентная акустика Focal PS 165F",
-        price: 32000,
-        category: "dynamics"
-    },
-    {
-        id: 2,
-        name: "Сабвуфер JBL GT5-12",
-        price: 18000,
-        category: "subwoofers"
-    },
-    {
-        id: 3,
-        name: "Овальная акустика Hertz EPX 690",
-        price: 9500,
-        category: "ovals"
-    },
-    {
-        id: 4,
-        name: "Пищалки Morel MDT 20",
-        price: 6200,
-        category: "tweeters"
-    },
-    {
-        id: 5,
-        name: "Усилитель Alpine MRV-F300",
-        price: 12500,
-        category: "amplifiers"
-    },
-    {
-        id: 6,
-        name: "Усилитель JBL GX-A602",
-        price: 9800,
-        category: "amplifiers"
-    },
-    {
-        id: 7,
-        name: "Акустический кабель 5м",
-        price: 1200,
-        category: "accessories"
-    },
-    {
-        id: 8,
-        name: "Блок предохранителей 60А",
-        price: 450,
-        category: "accessories"
-    },
-    {
-        id: 9,
-        name: "Конденсатор 1F с индикатором",
-        price: 2200,
-        category: "accessories"
-    }
+    // Акустика
+    { id: 1, name: "Компонентная акустика Focal PS 165F", price: 32000, category: "dynamics" },
+    { id: 2, name: "Сабвуфер JBL GT5-12", price: 18000, category: "subwoofers" },
+    { id: 3, name: "Овальная акустика Hertz EPX 690", price: 9500, category: "ovals" },
+    { id: 4, name: "Пищалки Morel MDT 20", price: 6200, category: "tweeters" },
+    
+    // Усилители
+    { id: 5, name: "Усилитель Alpine MRV-F300", price: 12500, category: "amplifiers" },
+    { id: 6, name: "Усилитель JBL GX-A602", price: 9800, category: "amplifiers" },
+    
+    // Аксессуары
+    { id: 7, name: "Акустический кабель 5м", price: 1200, category: "accessories" },
+    { id: 8, name: "Блок предохранителей 60А", price: 450, category: "accessories" },
+    { id: 9, name: "Конденсатор 1F с индикатором", price: 2200, category: "accessories" }
 ];
 
 let cart = [];
@@ -100,8 +60,10 @@ function renderCategoryPage(cat) {
     let list = [];
     if (cat === 'dynamics') {
         list = products.filter(p => ['dynamics','subwoofers','ovals','tweeters'].includes(p.category));
-    } else {
-        list = products.filter(p => p.category === cat);
+    } else if (cat === 'amplifiers') {
+        list = products.filter(p => p.category === 'amplifiers');
+    } else if (cat === 'accessories') {
+        list = products.filter(p => p.category === 'accessories');
     }
     renderList(list, cont);
 }
