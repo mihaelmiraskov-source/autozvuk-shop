@@ -51,13 +51,11 @@ const products = [
     { id: 315, name: "Автомагнитола Alpine X509U-WRA", price: 310000, category: "headunits" },
 
     // === САБВУФЕРЫ И АКСЕССУАРЫ ===
-    // Сабвуферы
     { id: 401, name: "Сабвуфер JBL GT5-12", price: 18000, category: "subwoofers" },
     { id: 402, name: "Сабвуфер Focal Performance P 30F", price: 22000, category: "subwoofers" },
     { id: 403, name: "Сабвуфер Hertz EP 4", price: 28000, category: "subwoofers" },
     { id: 404, name: "Сабвуфер Morel Supremo SUB421", price: 52000, category: "subwoofers" },
     { id: 405, name: "Сабвуфер Alpine S-W12D4", price: 15500, category: "subwoofers" },
-    // Аксессуары
     { id: 406, name: "Акустический кабель 4 Ga, 5м", price: 1200, category: "accessories" },
     { id: 407, name: "Блок предохранителей 60А с держателем", price: 450, category: "accessories" },
     { id: 408, name: "Конденсатор 1F с цифровым вольтметром", price: 2200, category: "accessories" },
@@ -132,7 +130,9 @@ function renderList(items, container) {
         const card = document.createElement('div');
         card.className = 'product-card';
         card.innerHTML =`
-            <img src="https://i.ibb.co/CpC2bz1K/4463c342-3c99-44ae-a94c-99eb76c790a8.jpg" alt="${p.name}">
+            <div class="product-image-container">
+                <img src="https://i.ibb.co/CpC2bz1K/4463c342-3c99-44ae-a94c-99eb76c790a8.jpg" alt="${p.name}" class="product-image">
+            </div>
             <h3>${p.name}</h3>
             <div class="price">${p.price.toLocaleString()} ₽</div>
             <button onclick="addToCart(${p.id})">В корзину</button>
