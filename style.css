@@ -109,6 +109,25 @@ body {
     gap: 8px;
 }
 
+.product-image-container {
+    width: 100%;
+    max-width: 120px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.product-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: 6px;
+    background: #0f0c1a;
+    padding: 4px;
+}
+
 .product-card h3 {
     font-size: 15px;
     font-weight: 600;
@@ -212,63 +231,7 @@ footer {
     margin: 6px 0;
     word-wrap: break-word;
 }
-/* Уменьшенные фото в карточках */
-.product-image-container {
-    width: 100%;
-    max-width: 120px;
-    height: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 10px;
-}
 
-.product-image {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
-    border-radius: 6px;
-    background: #0f0c1a;
-    padding: 4px;
-}
-/* Кнопка поддержки в Telegram */
-.support-btn-container {
-    position: fixed;
-    bottom: 60px; /* выше кнопки корзины */
-    right: 16px;
-    z-index: 200;
-}
-
-.support-btn {
-    background: linear-gradient(45deg, #0088cc, #00bfff);
-    color: white;
-    text-decoration: none;
-    padding: 8px 16px;
-    border-radius: 24px;
-    font-weight: bold;
-    font-size: 14px;
-    box-shadow: 0 3px 10px rgba(0, 136, 204, 0.4);
-    display: inline-block;
-    transition: transform 0.2s, background 0.2s;
-    text-align: center;
-}
-
-.support-btn:hover {
-    background: linear-gradient(45deg, #00bfff, #0088cc);
-    transform: scale(1.05);
-}
-
-/* Адаптация для телефона */
-@media (max-width: 480px) {
-    .support-btn-container {
-        right: 12px;
-        bottom: 60px;
-    }
-    .support-btn {
-        padding: 7px 14px;
-        font-size: 13px;
-    }
-}
 /* === ПЛАВАЮЩАЯ КНОПКА ПОДДЕРЖКИ === */
 .support-float {
     position: fixed;
@@ -290,6 +253,7 @@ footer {
     align-items: center;
     transition: transform 0.3s, box-shadow 0.3s;
     padding: 6px;
+    border: 2px solid #0088cc;
 }
 
 .support-btn:hover {
@@ -297,22 +261,35 @@ footer {
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
 }
 
-.support-btn img {
+.support-logo {
     width: 100%;
     height: 100%;
     object-fit: contain;
     border-radius: 50%;
-    filter: brightness(0); /* делает лого чёрным на белом фоне */
 }
 
-/* Плавающий эффект */
+.support-btn:hover::after {
+    content: "Написать техподдержке";
+    position: absolute;
+    top: -35px;
+    right: 50%;
+    transform: translateX(50%);
+    background: #0088cc;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    white-space: nowrap;
+    z-index: 1000;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
 @keyframes float {
     0% { transform: translateY(0px); }
     50% { transform: translateY(-8px); }
     100% { transform: translateY(0px); }
 }
 
-/* Адаптация для телефона */
 @media (max-width: 480px) {
     .support-float {
         right: 12px;
@@ -322,24 +299,4 @@ footer {
         width: 54px;
         height: 54px;
     }
-}
-
-/* === ЮРИДИЧЕСКИЙ ПОДВАЛ === */
-.legal-footer {
-    background: rgba(10, 8, 18, 0.8);
-    border-top: 1px solid rgba(110, 69, 226, 0.2);
-    padding: 16px;
-    text-align: center;
-    font-size: 11px;
-    color: #888;
-    margin-top: 40px;
-    border-radius: 8px;
-    line-height: 1.4;
-    position: relative;
-    z-index: 5;
-}
-
-.legal-footer p {
-    margin: 6px 0;
-    word-wrap: break-word;
 }
