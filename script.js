@@ -1,7 +1,7 @@
 const products = [
     // === АКУСТИЧЕСКИЕ СИСТЕМЫ (ДИНАМИКИ) ===
     { id: 101, name: "Компонентная акустика Focal PS 165F", price: 8790, category: "dynamics", image: "https://i.ibb.co/kgQkLy1v/6030510367.webp" },
-    { id: 102, name: "Коаксиальная акустика Hertz ESK 165.5", price: 11500, category: "dynamics", image: "/* ЗАГРУЗИ ФОТО НА IMGBB И ВСТАВЬ ССЫЛКУ */" },
+    { id: 102, name: "Коаксиальная акустика Hertz ESK 165.5", price: 11500, category: "dynamics", image: "https://i.ibb.co/M51SYq1Z/da937c547c739c5ef2c4b26f02b5d247-1.jpg" },
     { id: 103, name: "Компонентная акустика Morel Tempo 602", price: 24000, category: "dynamics", image: "/* ЗАГРУЗИ ФОТО НА IMGBB И ВСТАВЬ ССЫЛКУ */" },
     { id: 104, name: "Коаксиальная акустика JBL GX602", price: 5800, category: "dynamics", image: "/* ЗАГРУЗИ ФОТО НА IMGBB И ВСТАВЬ ССЫЛКУ */" },
     { id: 105, name: "Компонентная акустика Rainbow EL-C6.2", price: 19800, category: "dynamics", image: "/* ЗАГРУЗИ ФОТО НА IMGBB И ВСТАВЬ ССЫЛКУ */" },
