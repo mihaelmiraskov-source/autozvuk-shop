@@ -231,3 +231,41 @@ footer {
     background: #0f0c1a;
     padding: 4px;
 }
+/* Кнопка поддержки в Telegram */
+.support-btn-container {
+    position: fixed;
+    bottom: 60px; /* выше кнопки корзины */
+    right: 16px;
+    z-index: 200;
+}
+
+.support-btn {
+    background: linear-gradient(45deg, #0088cc, #00bfff);
+    color: white;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 24px;
+    font-weight: bold;
+    font-size: 14px;
+    box-shadow: 0 3px 10px rgba(0, 136, 204, 0.4);
+    display: inline-block;
+    transition: transform 0.2s, background 0.2s;
+    text-align: center;
+}
+
+.support-btn:hover {
+    background: linear-gradient(45deg, #00bfff, #0088cc);
+    transform: scale(1.05);
+}
+
+/* Адаптация для телефона */
+@media (max-width: 480px) {
+    .support-btn-container {
+        right: 12px;
+        bottom: 60px;
+    }
+    .support-btn {
+        padding: 7px 14px;
+        font-size: 13px;
+    }
+}
