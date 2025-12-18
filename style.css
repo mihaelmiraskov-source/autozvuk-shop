@@ -212,3 +212,22 @@ footer {
     margin: 6px 0;
     word-wrap: break-word;
 }
+/* Уменьшенные фото в карточках */
+.product-image-container {
+    width: 100%;
+    max-width: 120px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.product-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: 6px;
+    background: #0f0c1a;
+    padding: 4px;
+}
